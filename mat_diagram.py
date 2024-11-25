@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
+df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
 
 fig, ax = plt.subplots(figsize=(8,8))
 
@@ -20,3 +20,5 @@ plt.title('Графики валют')
 plt.grid()
 plt.legend(top_10, labels=top_10, loc="upper right")
 plt.show()
+
+
