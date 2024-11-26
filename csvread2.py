@@ -4,7 +4,8 @@ import random
 import matplotlib.pyplot as plt
 
 
-df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
+df = pd.read_csv('csv/data_182small.csv', sep=';', usecols=['letter_code', 'date', 'rate'],
+                 parse_dates=['date'], dayfirst=True)
 unique_codes = df['letter_code'].unique()
 # для разных графиков нужны данные в формате списка, а некоторым не нужны
 currency_list = list(unique_codes)
@@ -66,12 +67,14 @@ sns.set_theme(style="whitegrid")
 # sns.violinplot(data=df1, x='letter_code', y="date", hue ="rate")
 # plt.show()
 #_------------------------------------------------
+
 def raaa():
     r = random.random()
     return r
 # обрезать даты
 df=df.set_index(pd.to_datetime(df['date'])).loc['2020-01-01':'2020-07-30'].reset_index(drop=True)
 # обрезать число валют
+
 df1 = df[df['letter_code'] == 'JPY']
 # print(df1.head(10))
 
