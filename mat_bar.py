@@ -1,11 +1,6 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-# Готовим данные, округляем до второго знака полсе запятой и переводим формат даты в человекочитаемый вид,убираем неполные данные
-df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
-df['rate'] = round(df['rate'], 2)
-df['date'] = pd.to_datetime(df['date'])
-df = df.dropna()
-#
+from settins1 import *
+
+
 fig, ax = plt.subplots(figsize=(15,8))
 #  отбираем данные для построения курсов
 x = df[df['letter_code'] == 'GBP']['date']

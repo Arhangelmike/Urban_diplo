@@ -1,12 +1,9 @@
-import plotly.graph_objects as go
-import pandas as pd
+from settins1 import *
 
-df = pd.read_csv('csv/candle_sample.csv', sep=',' )
-df = df[['date', 'open', 'high', 'low', 'close']]
 
-fig = go.Figure(data=[go.Candlestick(x=df['date'],
-                open=df['open'], high=df['high'],
-                low=df['low'], close=df['close'])
+fig = go.Figure(data=[go.Candlestick(x=df2['date'],
+                open=df2['open'], high=df2['high'],
+                low=df2['low'], close=df2['close'])
                      ])
 
 fig.update_layout(xaxis_rangeslider_visible=False)

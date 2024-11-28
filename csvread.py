@@ -1,12 +1,4 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# чтение файла с данными
-df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
-# подготовка данных для их отрисовки с помощью pandas
-df['rate'] = round(df['rate'], 2)
-df['date'] = pd.to_datetime(df['date'])
-unique_codes = df['letter_code'].unique()
+from settins1 import *
 
 # подготовка слоя для отображения графика
 plt.figure(figsize=(20, 12))

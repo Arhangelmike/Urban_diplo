@@ -1,13 +1,10 @@
-import pandas as pd
-import plotly.graph_objects as go
+from settins1 import *
 
 
-data = pd.read_csv('csv/data_182small.csv', encoding='UTF-8', sep=';', parse_dates=['date'], dayfirst=True)
-data['rate'] = round(data['rate'], 2)
 dfA = pd.DataFrame({
-    "Price": data['rate'],
-    "Years": data['date'],
-    "Currency": data['letter_code']
+    "Price": df['rate'],
+    "Years": df['date'],
+    "Currency": df['letter_code']
 })
 
 currencies = dfA['Currency'].unique()

@@ -1,5 +1,4 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+from settins1 import *
 
 df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
 

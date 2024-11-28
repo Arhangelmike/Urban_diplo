@@ -1,6 +1,5 @@
-import pandas as pd
-import random
-import matplotlib.pyplot as plt
+from settins1 import *
+
 # читаем набор данных
 df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
 # Готовим данные, округляем до второго знака полсе запятой и переводим формат даты в человекочитаемый вид
@@ -25,7 +24,7 @@ colors=["#"+''.join([random.choice('0123456789ABCDEF') for i in range(6)])
 color_dic = dict(zip(currency_list, colors))
 
 
-# формируем варианты для того чтобы не запускать программу каждый раз когда надо показать
+# выбираем каокй вариант отрисовать для того чтобы не запускать программу каждый раз когда надо показать
 # как выглядит видоизмененный график
 while True:
     choise = int(input(
@@ -70,4 +69,6 @@ while True:
         plt.grid()
         plt.show()
         # --------
+        continue
+    else:
         continue

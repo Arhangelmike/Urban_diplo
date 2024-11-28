@@ -1,5 +1,5 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+from settins1 import *
+
 # читаем файл
 df = pd.read_csv('data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
 # готовим данные округляем, убираем данные с пропуском параметров, меняем отражаемый формат времени

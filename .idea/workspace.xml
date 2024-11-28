@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dab2c3e3-a59c-4309-9321-de12d0b645ac" name="Changes" comment="Н">
-      <change afterPath="$PROJECT_DIR$/21.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settins1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/21.py" beforeDir="false" afterPath="$PROJECT_DIR$/21.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csv/m_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/m_df.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csvread.py" beforeDir="false" afterPath="$PROJECT_DIR$/csvread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csvread2.py" beforeDir="false" afterPath="$PROJECT_DIR$/csvread2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csvread3.py" beforeDir="false" afterPath="$PROJECT_DIR$/csvread3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mat_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/mat_bar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mat_candlestic.py" beforeDir="false" afterPath="$PROJECT_DIR$/mat_candlestic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mat_diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/mat_diagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mat_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/mat_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mat_scatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/mat_scatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotly_candlesticks.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotly_candlesticks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seaborn_boxplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/seaborn_boxplot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +53,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.1.executor": "Run",
     "Python.21.executor": "Run",
     "Python.22.executor": "Run",
+    "Python.csvread.executor": "Run",
     "Python.csvread2.executor": "Run",
+    "Python.csvread3.executor": "Run",
     "Python.mat_bar.executor": "Run",
     "Python.mat_candlestic.executor": "Run",
     "Python.mat_scatter.executor": "Run",
+    "Python.plotly_candlesticks.executor": "Run",
     "Python.seab_lineplot.executor": "Run",
     "Python.seaborn_boxplot.executor": "Run",
+    "Python.settins1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
@@ -127,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732559581124</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Н">
+      <option name="closed" value="true" />
+      <created>1732654325938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732654325939</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

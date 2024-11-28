@@ -1,6 +1,4 @@
-import seaborn as sns
-import pandas as pd
-import matplotlib.pyplot as plt
+from settins1 import *
 
 # прочесть файл и создать датафрейм из csv указав какие  столбцы нужны (данных много,для ускорения работы программы)
 df_test = pd.read_csv('csv/data_182small.csv', usecols=['letter_code', 'date', 'rate'], sep=';')
@@ -16,15 +14,17 @@ df_test_1 = df_test[df_test['letter_code'].isin(mean_rate_1['letter_code'])]
 # Подготовить область под отрисовку графика размером 20 на 15
 plt.figure(figsize=(20,15))
 # отрисовать графмк
-sns.boxplot(x='letter_code', y='rate', data=df_test_1, palette='bright', hue='letter_code')
-# sns.violinplot(x='letter_code', y='rate', data=df_test_1)
+sns.boxplot(x='letter_code', y='rate', data=df_test_1, hue='letter_code', legend=False)
+#
 # Вывести график
 plt.show()
+
+plt.figure(figsize=(20,15))
 # выделить из основного датафрейма строки которые собержат имя валюты со значением меньше среднего
 df_test_2 = df_test[df_test['letter_code'].isin(mean_rate_2['letter_code'])]
 # Подготовить область под отрисовку графика размером 20 на 15
-plt.figure(figsize=(20,15))
+
 # отрисовать графмк
-sns.boxplot(x='letter_code', y='rate',data=df_test_2, palette='Set2')
+sns.boxplot(x='letter_code', y='rate',data=df_test_2, hue='letter_code', legend=False)
 # Вывести график
 plt.show()
