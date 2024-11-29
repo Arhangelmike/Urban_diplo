@@ -1,4 +1,3 @@
-from settins1 import *
 from csvread import *
 from csvread2 import *
 from csvread3 import *
