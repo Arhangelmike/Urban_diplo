@@ -1,7 +1,7 @@
 from settins1 import *
 
 
-# размер выводимого графика
+#подготовка области для вывода графика
 sns.set(rc={'figure.figsize':(18, 12)}, style='whitegrid')
 def seaborn_lineplot():
     sns.lineplot(
@@ -10,24 +10,33 @@ def seaborn_lineplot():
         hue='letter_code',
         legend = 'full',
         data=df)
+    # вывести график на экран
     plt.show()
     # подсказка legend = “auto”, “brief”, “full”, or False
 #_------------------------------------------------
 def seaborn_scatterplot():
+    # извлекаем 5 случайных имен валют
     currency_list = random.sample(letter, 5)
+    # получаем облегченный датафрейм только с нужными валютами
     filtered_df = df[df['letter_code'].isin(currency_list)]
+    #  Готовим данные для осей
     x1 = filtered_df[filtered_df['letter_code'].isin(currency_list)]['date']
     y1 = filtered_df[filtered_df['letter_code'].isin(currency_list)]['rate']
+    # готовим график для визуализации
     sns.scatterplot(x=x1, y=y1, hue=df['letter_code'], marker="x", s=3, legend =False)
+    # вывести график на экран
     plt.show()
 #_------------------------------------------------
 def seaborn_facegridGR():
-    currency_list = list(unique_codes)
+    # формируем отдельный датафрейм с отобранными валютами
     df1=df[df['letter_code'].isin(currency_list)]
     # обрезать даты
     df1=df1.set_index(pd.to_datetime(df1['date'])).loc['2018-01-01':'2018-05-31'].reset_index(drop=True)
+    # обозначить количество столцов на вывод
     g = sns.FacetGrid(df1, col='letter_code',  col_wrap=6, height=2.0)
+    # подготовить к выводу сам график
     g.map_dataframe(sns.lineplot, "date", "rate", marker=".", color="red")
+    # вывести готовый график
     plt.show()
 #
 def seaborn_heatmap():

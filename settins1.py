@@ -20,10 +20,12 @@ df = pd.read_csv('csv/data_182small.csv', sep=';', usecols=['letter_code', 'date
                  parse_dates=['date'], dayfirst=True)
 # получаем список уникальных имен валют
 unique_codes = df['letter_code'].unique()
-# для разных графиков нужны данные в формате списка
+# для разных графиков нужен списк имен валют
 currency_list = list(unique_codes)
+# Округлим до второго знака после запятой значения цены
 df['rate'] = round(df['rate'], 2)
 df['date'] = pd.to_datetime(df['date'])
+# удалить строки с пустыми параметрами
 df = df.dropna()
 
 
@@ -40,7 +42,7 @@ letter = ['AUD', 'BGN', 'HUF', 'DKK', 'USD', 'INR', 'CAD', 'CNY', 'NOK', 'PLN', 
           'TRY', 'FRF', 'GBP', 'SEK', 'CHF', 'JPY', 'XDR', 'DEM', 'ATS', 'BEF', 'GRD', 'IEP',
           'ISK', 'ESP', 'ITL', 'NLG', 'PTE', 'TRL', 'FIM', 'XEU', 'EEK', 'LVL', 'LTL', 'KZT',
           'KGS', 'MDL', 'BYB', 'CZK', 'UZS', 'AZM', 'AMD']
-
+# готовим лист цветов
 colorlist=['aliceblue', 'antiquewhite', 'aqua', 'aquamarine', 'azure',
             'beige', 'bisque', 'black', 'blanchedalmond', 'blue',
             'blueviolet', 'brown', 'burlywood', 'cadetblue',

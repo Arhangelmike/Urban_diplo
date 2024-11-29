@@ -31,14 +31,18 @@ def plotly_boxGR():
 
 # #_------------------------------------------------
 def plotly_pieGR():
+    # выбрать валюты со стоимостью больше 30 руб
     df_1 = df[df['letter_code'].isin(df[df['rate'] > 30]['letter_code'])]
+    # построить гарфик перед выводом
     fig = px.pie(df_1, values=df_1.rate, names="letter_code",
                  title='Количество проданной валюты')
+    # поправить ярлыки на графике для лучшего отоображения
     fig.update_traces(textposition='inside', textinfo='percent+label')
+    # вывести график
     fig.show()
 # #_------------------------------------------------stacked bar carts
 def plotly_barGR():
-    # нарисовать график
+    # построить гарфик перед выводом
     fig=px.bar(df, x='date', y='rate',  title="Курсы валют", color = 'letter_code', hover_name='letter_code')
     # наложить на каждый столбец все столбцы других валют другим цветом
     fig.update_layout(bargroupgap=False, barmode="stack" )

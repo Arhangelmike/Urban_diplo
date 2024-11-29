@@ -29,6 +29,12 @@ def mat_barGR():
     y2 = df[df['letter_code'] == 'CHF']['rate']
     x3 = df[df['letter_code'] == 'SEK']['date']
     y3 = df[df['letter_code'] == 'SEK']['rate']
+    print(x.head(3))
+    print(y.head(3))
+    print(x2.head(3))
+    print(y2.head(3))
+    print(x3.head(3))
+    print(y3.head(3))
     # формируем график
     plt.bar(x, y, color ='g')
     plt.bar(x2, y2, color ='y')
