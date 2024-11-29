@@ -23,7 +23,7 @@ while True:
         # -------- Библиотека Matplotlib
         while True:
             choise = int(input(
-                f'Выберите: \n1 - scetterGR.\n2 - pieGR\n3 - candleGR\n4 - plotGR\n5 - barGR'))
+                f'Выберите: \n1 - scetterGR.\n2 - pieGR\n3 - candleGR\n4 - plotGR\n5 - barGR\n'))
             if choise == 1:
                 # --------
                 mat_scetterGR()
@@ -46,8 +46,7 @@ while True:
                 # --------
                 continue
             if choise == 5:
-                # --------
-                # mat_barGR()
+                # ---------------------------------------
                 mat_barGR()
                 # --------
                 continue
@@ -59,7 +58,7 @@ while True:
         # -------- Библиотека Seaborn
         while True:
             choise = int(input(
-                f'Выберите: \n1 - boxplot\n2 - facegridGR\n3 - heatmap\n4 - lineplot\n5 - scatterplot'))
+                f'Выберите: \n1 - boxplot\n2 - facegridGR\n3 - heatmap\n4 - lineplot\n5 - scatterplot\n'))
             if choise == 1:
                 # --------
                 seaborn_boxplot()
@@ -94,7 +93,7 @@ while True:
         # --------Библиотека Plotly
         while True:
             choise = int(input(
-                f'Выберите:  \n1 - ScatterGR\n2 - boxGR\n3 - pieGR\n4 - barGR\n5 - candleGR\n6 - scetter3dGR'))
+                f'Выберите:  \n1 - ScatterGR\n2 - boxGR\n3 - pieGR\n4 - barGR\n5 - candleGR\n6 - scetter3dGR\n'))
             if choise == 1:
                 # --------
                 plotly_ScatterGR()

@@ -21,30 +21,20 @@ def mat_plotGR():
 #_____________________________________________________________matplotlib
 #_____________________________________________________________matplotlib -  bar
 def mat_barGR():
-    fig, ax = plt.subplots(figsize=(15,8))
+
+    #  подготовка области под график
+    plt.figure(figsize=(15, 8))
     #  отбираем данные для построения курсов
-    x = df[df['letter_code'] == 'GBP']['date']
-    y = df[df['letter_code'] == 'GBP']['rate']
-    x2 = df[df['letter_code'] == 'CHF']['date']
-    y2 = df[df['letter_code'] == 'CHF']['rate']
-    x3 = df[df['letter_code'] == 'SEK']['date']
-    y3 = df[df['letter_code'] == 'SEK']['rate']
-    print(x.head(3))
-    print(y.head(3))
-    print(x2.head(3))
-    print(y2.head(3))
-    print(x3.head(3))
-    print(y3.head(3))
-    # формируем график
-    plt.bar(x, y, color ='g')
-    plt.bar(x2, y2, color ='y')
-    plt.bar(x3, y3, color ='b')
-    #  подписываем оси
-    plt.xlabel('Дата')
+    df1 = df.set_index(pd.to_datetime(df['date'])).loc['2010-01-01':'2010-05-31'].reset_index(drop=True)
+    #  рисуем график перед выводом
+    df1.groupby('letter_code')['date'].nunique().plot(kind='bar', stacked=True, legend=False, color=colorlist)
+
+    #  подписываем
+    plt.xlabel('Сокращенное название валюты')
     plt.ylabel('Курс')
-    plt.title('Графики курсов валют')
+    plt.title('Максимальное значение для каждого курс за период 2010-01-01:2010-05-31')
     plt.grid()
-    #  рисуем график
+    #  отображаем график
     plt.show()
 
 #_____________________________________________________________matplotlib
