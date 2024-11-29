@@ -159,7 +159,7 @@ Cоздание бар-график с использованием pandas чт�
 
 ![seab_heatmap3](https://github.com/user-attachments/assets/85fdaef7-9fb3-48a6-b4b1-8becd1a86766)
 
-![seab_heatmap2](https://github.com/user-attachments/assets/c7d7c416-2869-4773-a3b6-042b170dede1)
+
 
 
 ![seab_heatmap3](https://github.com/user-attachments/assets/95c5b355-7f32-48c3-b0ab-a327332be78d)
