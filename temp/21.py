@@ -1,27 +1,5 @@
 from settins1 import *
 
-def plotly_ScatterGR():
-    dfA = pd.DataFrame({
-        "Price": df['rate'],
-        "Years": df['date'],
-        "Currency": df['letter_code']
-    })
-
-    currencies = dfA['Currency'].unique()
-
-    fig = go.Figure()
-    for idx, currency in enumerate(currencies):
-        filtered_data = dfA[dfA['Currency'] == currency]
-        fig.add_trace(
-            go.Scatter(x=filtered_data["Years"], y=filtered_data["Price"], name=currency),
-        )
-
-    fig.update_layout(
-        # height=400 * n_rows,
-        title="Мультиграфики по валютам",
-        showlegend=True  # Скрыть легенду, если она не нужна
-    )
-    fig.show()
 
 # #_------------------------------------------------
 def plotly_boxGR():
@@ -87,9 +65,11 @@ def plotly_scetter3dGR():
     fig = go.Figure(data=[trace], layout=layout)
     fig.show()
 
-# plotly_ScatterGR()
-# plotly_boxGR()
-# plotly_pieGR()
-# plotly_barGR()
-# plotly_candleGR()
-# plotly_scetter3dGR()
+
+
+
+plotly_boxGR()
+plotly_pieGR()
+plotly_barGR()
+plotly_candleGR()
+plotly_scetter3dGR()

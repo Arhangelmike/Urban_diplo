@@ -1,15 +1,5 @@
 from settins1 import *
 
-# читаем набор данных
-df = pd.read_csv('csv/data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
-# Готовим данные, округляем до второго знака полсе запятой и переводим формат даты в человекочитаемый вид
-df['rate'] = round(df['rate'], 2)
-df['date'] = pd.to_datetime(df['date'])
-# готовим лист всех валют, можно и через df['letter_code'].unique()
-letter = ['AUD', 'BGN', 'HUF', 'DKK', 'USD', 'INR', 'CAD', 'CNY', 'NOK', 'PLN', 'SGD',
-          'TRY', 'FRF', 'GBP', 'SEK', 'CHF', 'JPY', 'XDR', 'DEM', 'ATS', 'BEF', 'GRD', 'IEP',
-          'ISK', 'ESP', 'ITL', 'NLG', 'PTE', 'TRL', 'FIM', 'XEU', 'EEK', 'LVL', 'LTL', 'KZT',
-          'KGS', 'MDL', 'BYB', 'CZK', 'UZS', 'AZM', 'AMD']
 # выбор 10-ти случайных валют из списка, для улучшения читаемости графика
 currency_list = random.sample(letter, 10)
 # делаем выборку из всего набора данных строк содержащих эти валюты
@@ -28,7 +18,7 @@ color_dic = dict(zip(currency_list, colors))
 # как выглядит видоизмененный график
 while True:
     choise = int(input(
-        f'Приветствую!. Выберите график: \n1 - график с цветом.\n2 - график без цвета\n3 - график без цвета полный\n'))
+        f'Приветствую!. Выберите вид диаграммы рассеяния: \n1 - график с цветом.\n2 - график без цвета\n3 - график без цвета полный\n'))
     if choise == 1:
         # -------- цветной для 10 курсов валют
         '''	это метод создания графика, объединяющий инициализацию области для рисунка (fig) и осей (ax),

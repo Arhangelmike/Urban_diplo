@@ -1,14 +1,5 @@
 from settins1 import *
 
-# читаем файл
-df = pd.read_csv('data_182small.csv', sep=';', parse_dates=['date'], dayfirst=True)
-# готовим данные округляем, убираем данные с пропуском параметров, меняем отражаемый формат времени
-df['rate'] = round(df['rate'], 2)
-df['date'] = pd.to_datetime(df['date'])
-df = df.dropna()
-#  создаем список уникальных имен валют
-unique_codes = df['letter_code'].unique()
-
 
 # формируем подложку графика
 fig, ax = plt.subplots(figsize=(15,8))
