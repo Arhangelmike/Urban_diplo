@@ -23,7 +23,7 @@ while True:
         # -------- Библиотека Matplotlib
         while True:
             choise = int(input(
-                f'Выберите: \n1 - scetterGR.\n2 - pieGR\n3 - candleGR\n4 - plotGR\n5 - barGR\n'))
+                f'Выберите: \n1 - scetterGR.\n2 - pieGR\n3 - candleGR\n4 - plotGR\n5 - barGR\n6-bar2GR'))
             if choise == 1:
                 # --------
                 mat_scetterGR()
@@ -48,6 +48,11 @@ while True:
             if choise == 5:
                 # ---------------------------------------
                 mat_barGR()
+                # --------
+                continue
+            if choise == 6:
+                # ---------------------------------------
+                mat_bar2GR()
                 # --------
                 continue
             else:

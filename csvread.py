@@ -19,13 +19,36 @@ def mat_plotGR():
     plt.show()
 
 #_____________________________________________________________matplotlib
+
+
+def mat_bar2GR():
+
+    #  подготовка области под график
+    plt.figure(figsize=(15, 8))
+    x = df[df['letter_code'] == 'USD']['date']
+    y = df[df['letter_code'] == 'USD']['rate']
+    x2 = df[df['letter_code'] == 'CHF']['date']
+    y2 = df[df['letter_code'] == 'CHF']['rate']
+    x3 = df[df['letter_code'] == 'AZN']['date']
+    y3 = df[df['letter_code'] == 'AZN']['rate']
+    plt.bar(x, y, color ='g')
+    plt.bar(x2, y2, color ='y')
+    plt.bar(x3, y3, color ='b')
+    plt.xlabel('Дата')
+    plt.ylabel('Курс')
+    plt.title('Графики курсов валют')
+    plt.grid()
+    plt.show()
+
+
+
 #_____________________________________________________________matplotlib -  bar
 def mat_barGR():
 
     #  подготовка области под график
     plt.figure(figsize=(15, 8))
     #  отбираем данные для построения курсов
-    df1 = df.set_index(pd.to_datetime(df['date'])).loc['2010-01-01':'2010-05-31'].reset_index(drop=True)
+    df1 = df.set_index(pd.to_datetime(df['date'])).loc['2010-01-01':'2011-05-31'].reset_index(drop=True)
     #  рисуем график перед выводом
     df1.groupby('letter_code')['date'].nunique().plot(kind='bar', stacked=True, legend=False, color=colorlist)
 
