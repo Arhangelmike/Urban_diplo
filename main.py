@@ -4,10 +4,12 @@ from csvread3 import *
 from settins1 import *
 
 
-'''Ниже идет код, который, как обоолочка, позволяет перебрать те типы графиков,
+'''
+Ниже идет код, который, как обоолочка, позволяет перебрать те типы графиков,
 которые добавленны в дипломный проект, сами варианты работы с данными,
 с подготовкой и построением графиков, выведены в отдельные файлы и разделены по имени библиотек.
-Каждый график помещен в свою функцию для удобства вызова. '''
+Каждый график помещен в свою функцию для удобства вызова. 
+'''
 
 
 
@@ -23,7 +25,8 @@ while True:
         # -------- Библиотека Matplotlib
         while True:
             choise = int(input(
-                f'Выберите: \n1 - scetterGR.\n2 - pieGR\n3 - candleGR\n4 - plotGR\n5 - barGR\n6-bar2GR'))
+                f'Выберите: \n1 - scetterGR.\n2 - pieGR\n3 - candleGR\n4 - plotGR\n5 - barGR\n6-bar2GR'
+            f'Для выхода из внутреннего меню, набрать число больше, чем максимальное, в меню\n'))
             if choise == 1:
                 # --------
                 mat_scetterGR()
@@ -63,7 +66,8 @@ while True:
         # -------- Библиотека Seaborn
         while True:
             choise = int(input(
-                f'Выберите: \n1 - boxplot\n2 - facegridGR\n3 - heatmap\n4 - lineplot\n5 - scatterplot\n'))
+                f'Выберите: \n1 - boxplot\n2 - facegridGR\n3 - heatmap\n4 - lineplot\n5 - scatterplot\n'
+            f'Для выхода из внутреннего меню, набрать число больше, чем максимальное, в меню\n'))
             if choise == 1:
                 # --------
                 seaborn_boxplot()
@@ -98,7 +102,8 @@ while True:
         # --------Библиотека Plotly
         while True:
             choise = int(input(
-                f'Выберите:  \n1 - ScatterGR\n2 - boxGR\n3 - pieGR\n4 - barGR\n5 - candleGR\n6 - scetter3dGR\n'))
+                f'Выберите:  \n1 - ScatterGR\n2 - boxGR\n3 - pieGR\n4 - barGR\n5 - candleGR\n6 - scetter3dGR\n'
+            f'Для выхода из внутреннего меню, набрать число больше, чем максимальное, в меню\n'))
             if choise == 1:
                 # --------
                 plotly_ScatterGR()
